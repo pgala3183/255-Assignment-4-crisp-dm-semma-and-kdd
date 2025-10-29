@@ -1,0 +1,26 @@
+{
+  "model_name": "Bank Marketing Campaign Response Predictor",
+  "version": "1.0.0",
+  "created_date": "2025-10-29T01:58:30.469527",
+  "methodology": "SEMMA",
+  "algorithm": "XGBoost",
+  "training_data": {
+    "source": "Kaggle - Bank Marketing Dataset",
+    "full_dataset_size": 11162,
+    "sample_size": 4464,
+    "test_size": 2233,
+    "target_column": "deposit"
+  },
+  "performance_metrics": {
+    "test_accuracy": 0.8557993730407524,
+    "test_precision": 0.789763779527559,
+    "test_recall": 0.9480151228733459,
+    "test_f1": 0.8616838487972509,
+    "test_roc_auc": 0.9244829666572818
+  },
+  "deployment_notes": {
+    "preprocessing": "Apply engineer_features, then use saved pipeline",
+    "threshold": 0.3,
+    "inference_mode": "Batch scoring for campaign targeting"
+  }
+}

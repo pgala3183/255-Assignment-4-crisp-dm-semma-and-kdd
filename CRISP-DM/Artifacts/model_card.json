@@ -1,0 +1,42 @@
+{
+  "model_name": "Telco Customer Churn Predictor",
+  "version": "1.0.0",
+  "created_date": "2025-10-29T01:19:26.629477",
+  "methodology": "CRISP-DM",
+  "algorithm": "Random Forest Classifier",
+  "training_data": {
+    "source": "Kaggle - Telco Customer Churn",
+    "n_samples_train": 4930,
+    "n_samples_valid": 1056,
+    "n_samples_test": 1057,
+    "class_distribution": "3622 No Churn, 1308 Churn"
+  },
+  "performance_metrics": {
+    "test_accuracy": 0.7871333964049196,
+    "test_precision": 0.6386138613861386,
+    "test_recall": 0.45907473309608543,
+    "test_f1": 0.5341614906832298,
+    "test_roc_auc": 0.8214151410646805
+  },
+  "business_requirements": {
+    "primary_metric": "Recall >= 0.80",
+    "objective": "Identify at-risk customers for retention campaigns",
+    "inference_latency_target": "<150ms per prediction"
+  },
+  "limitations": [
+    "Model trained on single telecom dataset - may not generalize to other industries",
+    "Class imbalance may affect precision",
+    "Requires monthly retraining as customer behavior changes",
+    "Does not account for seasonality or external economic factors"
+  ],
+  "ethical_considerations": [
+    "Ensure fair treatment across demographic groups",
+    "Avoid discriminatory targeting based on protected attributes",
+    "Provide transparency to customers about retention offers"
+  ],
+  "usage": {
+    "input_format": "JSON with customer attributes",
+    "output_format": "Churn probability (0-1) and risk category",
+    "deployment_endpoint": "/score"
+  }
+}
